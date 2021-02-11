@@ -15,6 +15,7 @@
 
 body {
   background-color: var(--body);
+  height: 100vh;
 }
 
 /* Header Section */
@@ -62,16 +63,17 @@ a {
 .main-body {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: auto;
 }
 
 .content {
   display: flex;
   justify-content: center;
+  align-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
-  height: 100vh;
+  height: auto;
   border-radius: 20px;
   background-color: var(--content);
 }
@@ -84,6 +86,9 @@ a {
 }
 
 .front-cards, .back-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height:100%;
   width: 100%;
   border-radius: 10px;
@@ -100,12 +105,7 @@ a {
   transform: rotateY(180deg);
 }
 
-.front-cards .header {
-  text-align: center;
-  color: whitesmoke;
-}
-
-.back-cards .header {
+.front-cards, .back-cards .header {
   text-align: center;
   color: whitesmoke;
 }
