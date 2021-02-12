@@ -1,6 +1,6 @@
 :root {
-  --primary: rgb(4, 193, 250);
-  --content: rgb(100, 100, 100);
+  --primary: brown;
+  --content: rgb(230, 228, 228);
   --body: rgb(32, 32, 32);
 }
 
@@ -8,45 +8,108 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 1s;
   text-decoration: none;
   font-family: monospace;
 }
 
 body {
   background-color: var(--body);
-  height: 100vh;
 }
 
 /* Header Section */
 
-.navbar {
+.main-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.pokeball {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 30px;
+  background-color: var(--body)
+}
+
+.pokeball .main-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--body);
+}
+
+.pokeball .dot {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+}
+
+.navbar {
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 90%;
+  height: 200px;
+  background-color: var(--content);
+}
+
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  border-radius: 19px 19px 0px 0px;
+  background-color: var(--primary);
+}
+
+.navbar-menu {
+  height: 85px;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  justify-content: center;
   align-content: center;
-  height: 70px;
-  padding: 20px;
+  align-items: center;
 }
 
 .navbar-logo a {
   font-size: 30px;
+  color: var(--body);
+  transition: 0.4s;
 }
 
 .navbar-logo span {
-  color: var(--primary);
+  color: var(--body);
+}
+
+.navbar-ul ul, li::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--primary);
+  transition: 0.4s;
+}
+
+.navbar-ul ul, li:hover::after {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.navbar-ul ul, li a {
+  color: var(--body);
 }
 
 .navbar ul, li {
   display: flex;
   margin: 5px;
+  position: relative;
   font-size: 18px;
   list-style: none;
-}
-
-.navbar-menu a:hover {
-  color: var(--primary);
 }
 
 a {
@@ -57,6 +120,7 @@ a {
 /* Main Section */
 
 .flip {
+  transition: 1s;
   transform: rotateY(180deg);
 }
 
@@ -73,7 +137,8 @@ a {
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
-  height: auto;
+  min-height: 100vh;
+  margin-top: 20px;
   border-radius: 20px;
   background-color: var(--content);
 }
@@ -82,6 +147,7 @@ a {
   width: 200px;
   height: 300px;
   margin: 5px;
+  transition: 1s;
   transform-style: preserve-3d;
 }
 
