@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: rgb(88, 88, 88);
+  background-color: var(--body);
 }
 
 /* Header Section */
@@ -152,7 +152,6 @@ a {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .content {
