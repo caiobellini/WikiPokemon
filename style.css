@@ -53,7 +53,7 @@ body {
   margin-top: 20px;
   width: 90%;
   height: 200px;
-  background-color: var(--content);
+  background-color: whitesmoke;
 }
 
 .navbar-logo {
@@ -75,16 +75,19 @@ body {
 }
 
 .navbar-logo a {
-  font-size: 30px;
-  color: var(--body);
+  font-size: 50px;
+  font-weight: bold;
+  color: whitesmoke;
   transition: 0.4s;
 }
 
 .navbar-logo span {
-  color: var(--body);
+  font-weight: bold;
+  color: whitesmoke;
 }
 
-.navbar-ul ul, li::after {
+.navbar-ul ul,
+li::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -95,7 +98,9 @@ body {
   transition: 0.4s;
 }
 
-.navbar-ul ul, li:hover::after {
+.navbar-ul ul,
+li:hover::after,
+li.active::after {
   width: 100%;
   transition: 0.4s;
 }
@@ -130,12 +135,27 @@ a {
   height: auto;
 }
 
-.content {
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  border-radius: 19px 19px 0px 0px;
+  height: 100px;
+  background-color: var(--primary);
+}
+
+.cards-content {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content {
   width: 80%;
   min-height: 100vh;
   margin-top: 20px;
